@@ -1,0 +1,68 @@
+{
+  "tslint.alwaysShowRuleFailuresAsWarnings": true,
+  "editor.formatOnPaste": true,
+  "editor.fontFamily": "Consolas, 'Fira Code', monospace",
+  "workbench.editor.highlightModifiedTabs": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 60000,
+  "explorer.sortOrder": "type",
+  "editor.cursorStyle": "line-thin",
+  "editor.cursorBlinking": "smooth",
+  "terminal.integrated.cursorBlinking": true,
+  "files.trimFinalNewlines": true,
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.renderWhitespace": "all",
+  "prettier.tabWidth": 4,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": false
+  },
+  "editor.codeLens": true,
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.fontLigatures": true,
+  "editor.formatOnType": false,
+  "editor.letterSpacing": 1,
+  "editor.lineHeight": 25,
+  "editor.minimap.enabled": false,
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 4,
+  "editor.detectIndentation": true,
+  "editor.wordWrap": "off",
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": false
+    },
+    "editor.codeLens": true,
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.fontLigatures": true,
+    "editor.formatOnType": false,
+    "editor.letterSpacing": 1,
+    "editor.lineHeight": 25,
+    "editor.minimap.enabled": false,
+    "editor.tabCompletion": "on",
+    "editor.tabSize": 4,
+    "editor.detectIndentation": true,
+    "editor.wordWrap": "off"
+  },
+  "git.ignoreLimitWarning": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/*.js": {
+      "when": "$(basename).ts"
+    },
+    "**/*.js.map": {
+      "when": "$(basename)"
+    },
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "files.defaultLanguage": "typescript",
+  "files.trimTrailingWhitespace": true,
+  "prettier.singleQuote": true,
+  "workbench.colorCustomizations": {},
+  "sonarlint.ls.javaHome": "C:\\Program Files\\Java\\jre1.8.0_221"
+}

@@ -1,0 +1,11 @@
+@import 'theme-variables';
+
+@import '~bootstrap/scss/bootstrap';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+// import custom component themes here
+@import 'styles-reset.scss-theme';
+@import 'theme';
