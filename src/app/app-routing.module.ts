@@ -18,17 +18,52 @@ const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: () =>
-          import('@modules/home/home.module').then(m => m.HomeModule)
+          import('app/modules/home/home.module').then(m => m.HomeModule)
       },
       {
         path: 'about',
         loadChildren: () =>
-          import('@modules/about/about.module').then(m => m.AboutModule)
+          import('app/modules/about/about.module').then(m => m.AboutModule)
       },
       {
-        path: 'contact',
+        path: 'table-list',
         loadChildren: () =>
-          import('@modules/contact/contact.module').then(m => m.ContactModule)
+          import('app/modules/table-list/table-list.module').then(
+            m => m.TableListModule
+          )
+      },
+      {
+        path: 'table-list',
+        loadChildren: () =>
+          import('app/modules/contact/contact.module').then(
+            m => m.ContactModule
+          )
+      },
+      {
+        path: 'icons',
+        loadChildren: () =>
+          import('app/modules/icons/icons.module').then(m => m.IconsModule)
+      },
+      {
+        path: 'user-profile',
+        loadChildren: () =>
+          import('app/modules/user-profile/user-profile.module').then(
+            m => m.UserProfileModule
+          )
+      },
+      {
+        path: 'notifications',
+        loadChildren: () =>
+          import('app/modules/notifications/notifications.module').then(
+            m => m.NotificationsModule
+          )
+      },
+      {
+        path: 'typography',
+        loadChildren: () =>
+          import('app/modules/typography/typography.module').then(
+            m => m.TypographyModule
+          )
       }
     ]
   },
@@ -36,7 +71,7 @@ const routes: Routes = [
     path: 'auth',
     component: AuthLayoutComponent,
     loadChildren: () =>
-      import('@modules/auth/auth.module').then(m => m.AuthModule)
+      import('app/modules/auth/auth.module').then(m => m.AuthModule)
   },
   // Fallback when no prior routes is matched
   { path: '**', redirectTo: '/auth/login', pathMatch: 'full' }
