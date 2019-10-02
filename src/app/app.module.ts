@@ -5,18 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthLayoutComponent } from '@app/layout/auth-layout/auth-layout.component';
 import { ContentLayoutComponent } from '@app/layout/content-layout/content-layout.component';
-import { FooterComponent } from '@app/layout/footer/footer.component';
 import { CoreModule } from '@app/core/core.module';
 import { SharedModule } from '@app/shared/shared.module';
 import { AuthModule } from './modules/auth/auth.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ContentLayoutComponent,
-    FooterComponent,
-    AuthLayoutComponent
-  ],
+  declarations: [AppComponent, ContentLayoutComponent, AuthLayoutComponent],
   imports: [
     BrowserModule,
     AuthModule,

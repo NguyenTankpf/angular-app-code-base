@@ -8,34 +8,25 @@ declare interface RouteInfo {
   class: string;
 }
 export const ROUTES: RouteInfo[] = [
-  { path: '/dashboard', title: 'Dashboard', icon: 'dashboard', class: '' },
-  { path: '/user-profile', title: 'User Profile', icon: 'person', class: '' },
+  { path: '/dashboard', title: 'Hệ Thống', icon: '', class: '' },
   {
-    path: '/table-list',
-    title: 'Table List',
-    icon: 'content_paste',
+    path: '/user-profile',
+    title: 'Quản lý nhân viên',
+    icon: '',
     class: ''
   },
-  {
-    path: '/typography',
-    title: 'Typography',
-    icon: 'library_books',
-    class: ''
-  },
-  { path: '/icons', title: 'Icons', icon: 'bubble_chart', class: '' },
-  // { path: '/maps', title: 'Maps', icon: 'location_on', class: '' },
+  { path: '/table-list', title: 'DATA KH', icon: '', class: '' },
+  { path: '/typography', title: 'Hợp Đồng', icon: '', class: '' },
+  { path: '/icons', title: 'EMS - Bưu Điện', icon: '', class: '' },
+  { path: '/notifications', title: 'Thu - Chi', icon: '', class: '' },
+  { path: '/notifications', title: 'Tổng Đài', icon: '', class: '' },
   {
     path: '/notifications',
-    title: 'Notifications',
-    icon: 'notifications',
+    title: 'Báo Cáo -  Biểu Đồ',
+    icon: '',
     class: ''
-  }
-  // {
-  //   path: '/upgrade',
-  //   title: 'Upgrade to PRO',
-  //   icon: 'unarchive',
-  //   class: 'active-pro'
-  // }
+  },
+  { path: '/notifications', title: 'Tài Liệu', icon: '', class: '' }
 ];
 
 @Component({
@@ -51,10 +42,4 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
   }
-  // isMobileMenu() {
-  //   if ((window as any).width() > 991) {
-  //     return false;
-  //   }
-  //   return true;
-  // }
 }
