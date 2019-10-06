@@ -8,6 +8,9 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 })
 export class ContentLayoutComponent implements OnInit {
   constructor() {}
-
+  expand = true;
   ngOnInit() {}
+  onMenuToggle(event: any) {
+    this.expand = event;
+  }
 }

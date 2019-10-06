@@ -210,7 +210,7 @@
     padding-right: 10px;
     text-transform: capitalize;
     font-size: $font-paragraph - 1;
-    // padding: 10px 15px;
+    padding: 10px 15px;
   }
 
   .sidebar-background {
@@ -444,13 +444,19 @@
       z-index: 9999;
 
       .logo {
+        justify-content: center;
         a.logo-normal {
           opacity: 0;
           @include transform-translate-x(-25px);
         }
       }
-
+      .hidden-on-mini-bar {
+        display: none !important;
+        opacity: 0;
+        @include transform-translate-x(-25px);
+      }
       .sidebar-wrapper {
+        overflow-x: hidden;
         > .nav [data-toggle='collapse'] ~ div > ul > li > a .sidebar-normal,
         .user
           .user-info
@@ -461,42 +467,48 @@
           > a
           .sidebar-normal,
         .user .user-info > a > span,
-        > .nav li > a p {
-          @include transform-translate-x(-25px);
-          opacity: 0;
+        > .nav li > a {
+          i {
+            width: 100%;
+            padding: 0;
+          }
+          p {
+            @include transform-translate-x(-25px);
+            opacity: 0;
+          }
         }
       }
     }
 
-    .sidebar:hover {
-      width: 260px;
+    // .sidebar:hover {
+    //   width: 260px;
 
-      .logo {
-        a.logo-normal {
-          opacity: 1;
-          @include transform-translate-x(0px);
-        }
-      }
+    //   .logo {
+    //     a.logo-normal {
+    //       opacity: 1;
+    //       @include transform-translate-x(0px);
+    //     }
+    //   }
 
-      .sidebar-wrapper {
-        width: 260px;
+    //   .sidebar-wrapper {
+    //     width: 260px;
 
-        > .nav li > a p,
-        > .nav [data-toggle='collapse'] ~ div > ul > li > a .sidebar-normal,
-        .user
-          .user-info
-          [data-toggle='collapse']
-          ~ div
-          > ul
-          > li
-          > a
-          .sidebar-normal,
-        .user .user-info > a > span {
-          @include transform-translate-x(0px);
-          opacity: 1;
-        }
-      }
-    }
+    //     > .nav li > a p,
+    //     > .nav [data-toggle='collapse'] ~ div > ul > li > a .sidebar-normal,
+    //     .user
+    //       .user-info
+    //       [data-toggle='collapse']
+    //       ~ div
+    //       > ul
+    //       > li
+    //       > a
+    //       .sidebar-normal,
+    //     .user .user-info > a > span {
+    //       @include transform-translate-x(0px);
+    //       opacity: 1;
+    //     }
+    //   }
+    // }
   }
 
   .sidebar {

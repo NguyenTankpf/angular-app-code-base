@@ -1,10 +1,17 @@
 <div class="logo">
-  <a href="https://www.creative-tim.com" class="simple-text">
+  <a href="/" class="simple-text hidden-on-mini-bar">
     <div class="logo-img">
       <img src="/assets/images/angular2-logo-red.png" alt="" />
     </div>
     Creative Tim
   </a>
+  <button
+    id="minimizeSidebar"
+    class="btn btn-just-icon btn-white  "
+    (click)="toggleMenu()"
+  >
+    <i class="material-icons" aria-hidden="true">menu</i>
+  </button>
 </div>
 <div class="sidebar-wrapper">
   <ul class="nav">
@@ -19,8 +26,8 @@
       </a>
     </li>
   </ul>
-  <div class="p-3">
-    <div class="card">
+  <div class="p-3  hidden-on-mini-bar">
+    <div class="card ">
       <div class="card-body">
         Phần qly nhân viên, admin có quyền cho user sử dụng các trường, các mục,
         cột tỏng trang tính - có thể chia theo nhóm user - nhóm kinh doanh - kĩ

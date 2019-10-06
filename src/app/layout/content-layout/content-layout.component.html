@@ -1,11 +1,11 @@
-<div class="wrapper">
+<div class="wrapper" [ngClass]="{ 'sidebar-mini': !expand }">
   <div
     class="sidebar"
     data-color="azure"
     data-background-color="white"
     data-image="./assets/img/sidebar-1.jpg"
   >
-    <app-sidebar></app-sidebar>
+    <app-sidebar (OnMenuToggle)="onMenuToggle($event)"></app-sidebar>
     <div
       class="sidebar-background"
       style="background-image: url(./assets/images/sidebar-4.jpg)"

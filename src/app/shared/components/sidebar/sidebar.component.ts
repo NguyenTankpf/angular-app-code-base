@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 declare const $: any;
 declare interface RouteInfo {
@@ -8,25 +8,60 @@ declare interface RouteInfo {
   class: string;
 }
 export const ROUTES: RouteInfo[] = [
-  { path: '/dashboard', title: 'Hệ Thống', icon: '', class: '' },
+  {
+    path: '/dashboard',
+    title: 'Hệ Thống',
+    icon: 'dashboard',
+    class: ''
+  },
   {
     path: '/user-profile',
     title: 'Quản lý nhân viên',
-    icon: '',
+    icon: 'group',
     class: ''
   },
-  { path: '/table-list', title: 'DATA KH', icon: '', class: '' },
-  { path: '/typography', title: 'Hợp Đồng', icon: '', class: '' },
-  { path: '/icons', title: 'EMS - Bưu Điện', icon: '', class: '' },
-  { path: '/notifications', title: 'Thu - Chi', icon: '', class: '' },
-  { path: '/notifications', title: 'Tổng Đài', icon: '', class: '' },
+  {
+    path: '/table-list',
+    title: 'DATA KH',
+    icon: 'recent_actors',
+    class: ''
+  },
+  {
+    path: '/typography',
+    title: 'Hợp Đồng',
+    icon: 'contacts',
+    class: ''
+  },
+  {
+    path: '/icons',
+    title: 'EMS - Bưu Điện',
+    icon: 'local_post_office',
+    class: ''
+  },
+  {
+    path: '/notifications',
+    title: 'Thu - Chi',
+    icon: 'local_atm',
+    class: ''
+  },
+  {
+    path: '/notifications',
+    title: 'Tổng Đài',
+    icon: 'local_phone',
+    class: ''
+  },
   {
     path: '/notifications',
     title: 'Báo Cáo -  Biểu Đồ',
-    icon: '',
+    icon: 'timeline',
     class: ''
   },
-  { path: '/notifications', title: 'Tài Liệu', icon: '', class: '' }
+  {
+    path: '/notifications',
+    title: 'Tài Liệu',
+    icon: 'folder_open',
+    class: ''
+  }
 ];
 
 @Component({
@@ -36,10 +71,15 @@ export const ROUTES: RouteInfo[] = [
 })
 export class SidebarComponent implements OnInit {
   menuItems: any[];
-
+  expand = true;
+  @Output() OnMenuToggle: EventEmitter<any> = new EventEmitter();
   constructor() {}
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
+  }
+  toggleMenu() {
+    this.expand = !this.expand;
+    this.OnMenuToggle.emit(this.expand);
   }
 }
